@@ -96,7 +96,7 @@ extension Renderer: MTKViewDelegate {
                 for subMesh in mtkMesh.submeshes {
                     commandEncoder.setVertexBytes(&index, length: MemoryLayout<Int>.stride, index: 2)
                     
-                    commandEncoder.drawIndexedPrimitives(type: .triangle,
+                    commandEncoder.drawIndexedPrimitives(type: .line,
                                                          indexCount: subMesh.indexCount,
                                                          indexType: subMesh.indexType,
                                                          indexBuffer: subMesh.indexBuffer.buffer,
